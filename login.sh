@@ -11,15 +11,6 @@ function login_get_session_token ()
 
   local payload="{\"app_id\":\"$APP_ID\",\"password\":\"$pass\"}"
   local session_token=$(curl -ks -X POST $BASE_URL/login/session/ -d $payload | jq '.result.session_token' | tr -d \")
-  if [ $DEBUG ]; then
-    echo "APP_TOKEN_FILE: $APP_TOKEN_FILE"
-    echo "BASE_URL: $BASE_URL"
-    echo "challenge: $challenge"
-    echo "app_token: $app_token"
-    echo "pass: $pass"
-    echo "payload: $payload"
-    echo "session_token: $session_token"
-  fi
   echo $session_token
 }
 

@@ -4,7 +4,6 @@ source .env
 
 function add_rule ()
 {
-  echo "session_token: $session_token"
   LAN_IP=$1
   WAN_PORT=$2
   LAN_PORT=$3
@@ -20,7 +19,6 @@ function add_rule ()
       "ip_proto": "tcp",
       "src_ip": "0.0.0.0"
   }')
-  echo $res | jq
 }
 
 function get_certbot_id_rule ()
