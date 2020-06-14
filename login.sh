@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd "$(dirname "$0")"
 source .env
 
 function login_get_session_token ()
@@ -24,7 +24,7 @@ function login_get_session_token ()
 }
 
 if [ $# -ne 1 ]; then
-  echo "Usage: login app_token_file"
+  echo "Usage: $0 app_token_file"
   exit 1
 fi
 APP_TOKEN_FILE=$1
