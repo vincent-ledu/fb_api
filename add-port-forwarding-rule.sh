@@ -28,7 +28,7 @@ function get_certbot_id_rule ()
 
 if [ $# -ne 6 ]; then
   echo "Usage: $0 app_token_file lan_ip wan_port lan_port enabled comment"
-  echo '  Exemple: $0 fr.freebox.myapp 192.168.0.18 80 80 false "for my https server"'
+  echo '  Exemple: '$0' fr.freebox.myapp 192.168.0.18 80 80 false "for my https server"'
   exit 1
 fi
 APP_TOKEN_FILE=$1
