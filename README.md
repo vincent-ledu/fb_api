@@ -12,9 +12,10 @@ One automatic way to renew the certificate is to expose the challenge file on ht
 
 # What can you do with this scripts ?
 
-* Create an application to call the freebox api
-* login to you freebox
-* add / delete port forwarding
+* Create an application to call the freebox api (v0.1)
+* login to you freebox (v0.1)
+* add / delete port forwarding (v0.1)
+* update a rule (v0.2)
 
 Since you have the skeleton and the login phase, you can call all the other API by creating you own shells scripts.
 
@@ -30,6 +31,9 @@ Since you have the skeleton and the login phase, you can call all the other API 
 * Delete a port forwarding rule:
   * call: `./delete-port-forwarding-rule.sh .fr.freebox.my_app comment certbot`
   * This will search a rule with "certbot" in the comment field, and delete the rule.
+* Update a port forwarding rule:
+  * call: `./update-port-forwarding-rule.sh .fr.freebox.my_app comment certbot enabled true`
+  * This will search a rule with "certbot" in the comment field, and update the field enable to true.
   
 # External documentation
 
